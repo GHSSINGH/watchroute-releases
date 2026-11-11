@@ -1,0 +1,53 @@
+{
+  "$schema": "https://watchroute.app/schemas/resolver-rules.v1.json",
+  "version": 1,
+  "updatedAt": "2026-11-11T19:25:00Z",
+  "embedHosts": {
+    "turboembed": {
+      "domains": [
+        "turboembed.com",
+        "turbovio.com",
+        "turboviplay.com",
+        "turbostream.xyz",
+        "goldencrestdigital.shop"
+      ],
+      "trackingPath": "/api/stream/tracking?c=",
+      "downloadTiersPath": "/api/download/tiers",
+      "downloadGetPath": "/api/download/get"
+    },
+    "rpmplay": {
+      "domains": [
+        "rpmplay.xyz",
+        "movieshub.rpmplay.xyz",
+        "rpmvid.xyz"
+      ],
+      "resolvePath": "/api/public/resolve?file1="
+    },
+    "genericEmbeds": {
+      "domains": [
+        "vidhide.com",
+        "vidhidepro.com",
+        "vidhidevip.com",
+        "filelions.to",
+        "streamwish.to",
+        "streamwish.com",
+        "strwish.com",
+        "doodstream.com",
+        "dood.so",
+        "streamtape.com"
+      ]
+    }
+  },
+  "streamApiWhitelist": [
+    "/api/stream/",
+    "/api/public/resolve",
+    "/api/download/",
+    "tracking?c="
+  ],
+  "mediaPatterns": [
+    "\\.m3u8(?:\\?[^\"'\\s]*)?",
+    "\\.mp4(?:\\?[^\"'\\s]*)?",
+    "index-[a-zA-Z0-9_-]+\\.txt",
+    "master\\.txt"
+  ]
+}
